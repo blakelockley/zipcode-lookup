@@ -1,0 +1,58 @@
+Alabama;35801;35816
+Alaska;99501;99524
+Arizona;85001;85055
+Arkansas;72201;72217
+California;94203;94209
+California;90001;90089
+California;90209;90213
+Colorado;80201;80239
+Conneticut;06101;06112
+Deleware;19901;19905
+District of Columbia;20001;20020
+Florida;32501;32509
+Florida;33124;33190
+Florida;32801;32837
+Georgia;30301;30381
+Hawaii;96801;96830
+Idaho;83254;83254
+Illinois;60601;60641
+Illinois;62701;62709
+Indiana;46201;46209
+Iowa;52801;52809
+Iowa;50301;50323
+Kansas;67201;67221
+Kentucky;41701;41702
+Lousiana;70112;70119
+Maine;04032;04034
+Maryland;21201;21237
+Massachusetts;02101;02137
+Michigan;49036;49036
+Michigan;49734;49735
+Minnesota;55801;55808
+Mississippo;39530;39535
+Missouri;63101;63141
+Montana;59044;59044
+Nebraska;68901;68902
+Nevada;89501;89513
+New Hampshire;03217;03217
+New Jersey;07039;07039
+New Mexico;87500;87506
+New York;10001;10048
+North Carolina;27565;27565
+North Dakota;58282;58282
+Ohio;44101;44179
+Oklahoma;74101;74110
+Oregon;97201;97225
+Pennsylvania;15201;15244
+Rhode Island;02840;02841
+South Carolina;29020;29020
+South Dakota;57401;57402
+Tennessee;37201;37222
+Texas;78701;78705
+Utah;84321;84323
+Vermont;05751;05751
+Virginia;24517;24517
+Washington;98004;98009
+West Virginia;25813;25813
+Wisconsin;53201;53228
+Wyoming;82941;82941
