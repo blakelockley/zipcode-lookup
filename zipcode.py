@@ -2,18 +2,19 @@ def first(t):
     return t[0]
 
 
-def second(t):
-    return t[1]
+def read_zipcodes():
+    for line in open('zipcode.txt'):
+        state, upper, lower = line.strip().split(';')
+        yield state, int(upper), int(lower)
 
 
-def main(value):
+def find_state(value):
     lower_map = []
     upper_map = []
 
-    for line in open('zipcode.txt'):
-        state, lower, upper = line.strip().split(';')
-        lower_map.append((int(lower), state))
-        upper_map.append((int(upper), state))
+    for state, lower, upper in read_zipcodes():
+        lower_map.append((lower, state))
+        upper_map.append((upper, state))
 
     lower_map.sort(key=first)
     upper_map.sort(key=first, reverse=True)
@@ -37,14 +38,31 @@ def main(value):
     # No valid range found
     return None
 
+
+def dense_map():
+    """Produce a dense map to provide N(1) lookup for valid zipcode"""
+    
+    mapping = {}
+    for state, lower, upper in read_zipcodes():
+        for zipcode in range(lower, upper + 1):
+            mapping[zipcode] = state
+    
+    return mapping
+
+
 if __name__ == '__main__':
     import sys
     
-    if len(sys.argv) < 2:
-        print(f"usage: python {sys.argv[0]} <zipcode>")
+    if len(sys.argv) != 2:
+        print(f"usage: python {sys.argv[0]} [-d | --dense | <zipcode>]")
         exit(1)
+
+    if sys.argv[1] in ["-d", "--dense"]:
+        print(dense_map())
+        exit(0) 
 
     arg = int(sys.argv[1])
 
-    result = main(arg)
+    result = find_state(arg)
     print(result)
+
