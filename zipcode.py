@@ -9,34 +9,11 @@ def read_zipcodes():
 
 
 def find_state(value):
-    lower_map = []
-    upper_map = []
-
     for state, lower, upper in read_zipcodes():
-        lower_map.append((lower, state))
-        upper_map.append((upper, state))
+        if lower <= value <= upper:
+            return state
 
-    lower_map.sort(key=first)
-    upper_map.sort(key=first, reverse=True)
-
-    upper_result = None
-    for lower, state in lower_map:
-        if lower > value:
-            break
-        upper_result = state
-
-    lower_result = None
-    for upper, state in upper_map:
-        if upper < value:
-            break
-        lower_result = state
-
-    if lower_result == upper_result:
-        # Value found in valid range
-        return lower_result
-
-    # No valid range found
-    return None
+    return None 
 
 
 def dense_map():
